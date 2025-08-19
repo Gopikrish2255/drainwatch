@@ -17,6 +17,7 @@
   <form method="POST" action="authority_auth.php" class="card p-4 shadow">
     <input type="email" name="email" placeholder="Email" class="form-control mb-3" required>
     <input type="password" name="password" placeholder="Password" class="form-control mb-3" required><br>
+    
     <button type="submit" class="btn btn-success w-100">
       <i class="fas fa-sign-in-alt"></i> Login
     </button>
