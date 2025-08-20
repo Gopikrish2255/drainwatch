@@ -32,8 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("sssds", $title, $description, $location, $district_id, $image_path);
 
     if ($stmt->execute()) {
-        echo "<div style='padding:20px; font-family:Arial;'>✅ Report submitted successfully! <a href='index.html'>Go back</a></div>";
-    } else {
+        header("Location: success.php?ref=" . urlencode($referenceId));
+exit;
+ } else {
         echo "❌ Error: " . $stmt->error;
     }
 
