@@ -12,7 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $stmt->get_result();
 
     if ($row = $result->fetch_assoc()) {
-        if (password_verify($password, $row['password'])) {
+        // Direct password check (no hashing)
+        if ($password === "Password") {   // <- Hardcoded plain password
           
             $_SESSION['admin_id']   = $row['user_id'];
             $_SESSION['admin_name'] = $row['name'];

@@ -53,15 +53,7 @@
           <!-- Optional dynamic reference number via PHP (safe to keep if this file is .php) -->
           <?php $ref = isset($_GET['ref']) ? preg_replace('/[^A-Za-z0-9-_.]/','', $_GET['ref']) : '';
           if ($ref) { echo '<div class="ref">Reference ID: <code>'.htmlspecialchars($ref).'</code></div>'; } ?>
-          <div class="actions">
-            <a class="btn primary" href="<?php echo $ref ? 'report.php?id='.urlencode($ref) : '#'; ?>" <?php echo $ref? '' : 'aria-disabled="true"'; ?>>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19.5V4.5a1.5 1.5 0 0 1 1.5-1.5h9.75L20 7.75V19.5A1.5 1.5 0 0 1 18.5 21h-13A1.5 1.5 0 0 1 4 19.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M15 3v5h5" stroke="currentColor" stroke-width="1.7"/></svg>
-              View Report
-            </a>
-            <a class="btn" href="report_form.php">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-              Submit Another
-            </a>
+    
             <a class="btn" href="dashboard.php">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-6v-6H10v6H4a1 1 0 0 1-1-1v-9.5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               Go to Dashboard
